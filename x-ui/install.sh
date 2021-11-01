@@ -1,6 +1,4 @@
-#!/bin/bash
-
-# wget -qO- https://cdn.jsdelivr.net/gh/q2533q/files/x-ui/install.sh | bash
+#!/bin/sh
 
 cd /root/
 rm -rf x-ui/ /usr/local/x-ui/ /usr/bin/x-ui
