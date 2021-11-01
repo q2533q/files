@@ -4,7 +4,7 @@
 
 cd /root/
 rm -rf x-ui/ /usr/local/x-ui/ /usr/bin/x-ui
-wget --no-check-certificate -O- https://cdn.jsdelivr.net/gh/q2533q/files/x-ui/x-ui-linux-amd64.tar.gz
+wget https://cdn.jsdelivr.net/gh/q2533q/files/x-ui/x-ui-linux-amd64.tar.gz
 tar zxvf x-ui-linux-amd64.tar.gz
 chmod +x x-ui/x-ui x-ui/bin/xray-linux-* x-ui/x-ui.sh
 cp x-ui/x-ui.sh /usr/bin/x-ui
