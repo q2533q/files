@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# bash <(curl -Ls https://cdn.jsdelivr.net/gh/q2533q/files/x-ui/install.sh)
+
 cd /root/
 rm -rf x-ui/ /usr/local/x-ui/ /usr/bin/x-ui
 wget --no-check-certificate -O- https://cdn.jsdelivr.net/gh/q2533q/files/x-ui/x-ui-linux-amd64.tar.gz
