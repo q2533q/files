@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bash <(curl -Ls https://cdn.jsdelivr.net/gh/q2533q/files/x-ui/install.sh)
+# wget -qO- https://cdn.jsdelivr.net/gh/q2533q/files/x-ui/install.sh | bash
 
 cd /root/
 rm -rf x-ui/ /usr/local/x-ui/ /usr/bin/x-ui
