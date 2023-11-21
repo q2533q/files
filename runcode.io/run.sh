@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#自动部署 sudo -i && bash <(curl -fsSL https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh)
+#自动部署 sudo -i
+#自动部署 bash <(curl -fsSL https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh)
 if [ ! -f "/home/ubuntu/workspace/init" ];then
     echo "import subprocess" > /home/ubuntu/runcode/run_user_script.py
     echo "def main():" >> /home/ubuntu/runcode/run_user_script.py
