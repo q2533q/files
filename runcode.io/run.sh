@@ -2,13 +2,13 @@
 
 #初始命令 bash <(curl -fsSL https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh)
 if [ ! -f "/home/ubuntu/workspace/init" ];then
-    chmod -R 777 /home/ubuntu/workspace/
+    sudo chmod -R 777 /home/ubuntu/workspace/
     echo "import subprocess" > /home/ubuntu/runcode/run_user_script.py
     echo "def main():" >> /home/ubuntu/runcode/run_user_script.py
     echo "    subprocess.run(['bash','/home/ubuntu/workspace/run.sh'])" >> /home/ubuntu/runcode/run_user_script.py
     echo "main()" >> /home/ubuntu/runcode/run_user_script.py
 
-    echo root:'aA123456' | chpasswd root
+    sudo echo root:'aA123456' | chpasswd root
     sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;
     sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;
     sudo service sshd restart
@@ -18,7 +18,7 @@ if [ ! -f "/home/ubuntu/workspace/init" ];then
     wget https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh
     wget https://raw.githubusercontent.com/q2533q/files/main/runcode.io/xray.zip
     unzip xray.zip
-    chmod -R 777 /home/ubuntu/workspace/
+    sudo chmod -R 777 /home/ubuntu/workspace/
     echo 1 > /home/ubuntu/workspace/init
 else
     echo "init已存在";    
