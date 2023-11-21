@@ -2,7 +2,6 @@
 
 #初始命令 bash <(curl -fsSL https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh)
 if [ ! -f "/home/ubuntu/workspace/init" ];then
-    sudo chmod -R 777 /home/ubuntu/workspace/
     echo "import subprocess" > /home/ubuntu/runcode/run_user_script.py
     echo "def main():" >> /home/ubuntu/runcode/run_user_script.py
     echo "    subprocess.run(['bash','/home/ubuntu/workspace/run.sh'])" >> /home/ubuntu/runcode/run_user_script.py
@@ -15,7 +14,6 @@ if [ ! -f "/home/ubuntu/workspace/init" ];then
     npm install -g wstunnel
     
     cd /home/ubuntu/workspace/
-    wget https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh
     wget https://raw.githubusercontent.com/q2533q/files/main/runcode.io/xray.zip
     unzip xray.zip
     sudo chmod -R 777 /home/ubuntu/workspace/
