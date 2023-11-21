@@ -1,0 +1,78 @@
+{
+    "inbounds": [{
+            "tag": "in-8091",
+            "listen": "0.0.0.0",
+            "listen": "::",
+            "port": 8091,
+            "protocol": "vmess",
+            "settings": {
+                "udp": false,
+                "clients": [{
+                        "id": "88888888-8888-8888-8888-888888888888",
+                        "alterId": 0
+                    }
+                ],
+                "allowTransparent": false
+            },
+            "streamSettings": {
+                "network": "ws",
+                "wsSettings": {
+                    "path": "/",
+                    "headers": {}
+                }
+            }
+        }, {
+            "tag": "in-8092",
+            "port": 8092,
+            "listen": "0.0.0.0",
+            "listen": "::",
+            "protocol": "http",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            },
+            "settings": {
+                "auth": "password",
+                "udp": true,
+                "allowTransparent": false,
+                "accounts": [{
+                        "user": "80",
+                        "pass": "92"
+                    }
+                ]
+            }
+        }, {
+            "tag": "in-8093",
+            "port": 8093,
+            "listen": "0.0.0.0",
+            "listen": "::",
+            "protocol": "socks",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
+            },
+            "settings": {
+                "auth": "password",
+                "udp": true,
+                "allowTransparent": false,
+                "accounts": [{
+                        "user": "80",
+                        "pass": "93"
+                    }
+                ]
+            }
+        }
+    ],
+    "outbounds": [{
+            "tag": "direct",
+            "protocol": "freedom",
+            "settings": {}
+        }
+    ]
+}
