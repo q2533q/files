@@ -15,8 +15,9 @@ if [ ! -f "/home/ubuntu/workspace/init" ];then
     npm install -g wstunnel
     
     cd /home/ubuntu/workspace/
-    wget https://raw.githubusercontent.com/q2533q/files/main/runcode.io/xray
-    wget https://raw.githubusercontent.com/q2533q/files/main/runcode.io/config.json
+    apt install -y wget zip
+    wget https://raw.githubusercontent.com/q2533q/files/main/runcode.io/xray.zip
+    unzip xray.zip
     chmod -R 777 /home/ubuntu/workspace/
     echo 1 > /home/ubuntu/workspace/init
 else
