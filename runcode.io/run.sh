@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#自动部署 curl -fsSL https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh -o /tmp/run.sh && sudo sh /tmp/run.sh
+#1自动部署 sudo -i
+#2自动部署 bash <(curl -fsSL https://raw.githubusercontent.com/q2533q/files/main/runcode.io/run.sh)
 if [ ! -f "/home/ubuntu/workspace/init" ];then
     echo "import subprocess" > /home/ubuntu/runcode/run_user_script.py
     echo "def main():" >> /home/ubuntu/runcode/run_user_script.py
@@ -24,8 +25,8 @@ else
 fi
 
 #运行程序
-count=`ps -ef | grep "xray" | grep -v "grep" | wc -l`
-if [[ $count == 0 ]];then
+runid=`pidof xray`;
+if [[ "$runid" = "" ]]; then
     echo "启动程序"
     wstunnel -s :8090 >/dev/null 2>&1 &
     /home/ubuntu/workspace/xray &
