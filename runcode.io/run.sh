@@ -21,7 +21,8 @@ if [ ! -f "/home/ubuntu/Downloads/init" ];then
     chmod -R 777 /home/ubuntu/Downloads/
     echo 1 > /home/ubuntu/Downloads/init
 else
-    echo "init已存在"; 
+    echo "init已存在"
+    echo 3 > /proc/sys/vm/drop_caches
     top
 fi
 
