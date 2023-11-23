@@ -21,10 +21,10 @@ if [ ! -f "/home/ubuntu/Downloads/init" ];then
     chmod -R 777 /home/ubuntu/Downloads/
     echo 1 > /home/ubuntu/Downloads/init
 	
-	apt install -y qemu-kvm && qemu-img create -f qcow2 /home/ubuntu/Downloads/win10 60G && chmod 777 /home/ubuntu/Downloads/win10
+    apt install -y qemu-kvm && qemu-img create -f qcow2 /home/ubuntu/Downloads/win10 60G && chmod 777 /home/ubuntu/Downloads/win10
 else
     echo "init已存在"; 
-	top
+    top
 fi
 
 #运行程序
