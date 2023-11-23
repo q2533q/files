@@ -22,8 +22,6 @@ if [ ! -f "/home/ubuntu/Downloads/init" ];then
     echo 1 > /home/ubuntu/Downloads/init
 else
     echo "init已存在"
-    echo 3 > /proc/sys/vm/drop_caches
-    top
 fi
 
 #运行程序
@@ -36,6 +34,8 @@ else
     echo "程序已运行"
 fi
 
+echo 3 > /proc/sys/vm/drop_caches
+top
 
 #wstunnel -t :22::22 wss://8090-billowing-paper-54599953.eu-ws4.runcode.io
 #wstunnel -t :8092::8092 wss://8090-billowing-paper-54599953.eu-ws4.runcode.io
