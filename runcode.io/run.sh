@@ -20,8 +20,6 @@ if [ ! -f "/home/ubuntu/Downloads/init" ];then
     rm xray.zip
     chmod -R 777 /home/ubuntu/Downloads/
     echo 1 > /home/ubuntu/Downloads/init
-	
-    apt install -y qemu-kvm && qemu-img create -f qcow2 /home/ubuntu/Downloads/win10 60G && chmod 777 /home/ubuntu/Downloads/win10
 else
     echo "init已存在"; 
     top
@@ -42,9 +40,3 @@ fi
 #wstunnel -t :8092::8092 wss://8090-billowing-paper-54599953.eu-ws4.runcode.io
 #vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogInJ1bmNvZGUuaW8iLA0KICAiYWRkIjogIjgwOTEtd2hpdGUtcml2ZXItNzA3NjQzNjMuZXUtd3MyLnJ1bmNvZGUuaW8iLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiODg4ODg4ODgtODg4OC04ODg4LTg4ODgtODg4ODg4ODg4ODg4IiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICIiLA0KICAicGF0aCI6ICIvIiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiIsDQogICJmcCI6ICJjaHJvbWUiDQp9
 
-
-#下载系统镜像
-# https://www.microsoft.com/zh-cn/software-download/windows10ISO
-# https://software.download.prss.microsoft.com/dbazure/Win10_22H2_Chinese_Simplified_x64v1.iso?t=656b59ae-04f1-4003-a8c7-e77900aa21d5&e=1700789401&h=78bda65bdb6f507b989b9aadf0c9e47478ebe6b2885f618e54c8d40220bb3286
-#运行WIN10
-# kvm /home/ubuntu/Downloads/win10 -m 10240 -smp cores=6 -net user -net nic -usb -usbdevice tablet -cdrom /home/ubuntu/Downloads/Win10_22H2_Chinese_Simplified_x64v1.iso
