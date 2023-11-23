@@ -7,5 +7,6 @@ https://software.download.prss.microsoft.com/dbazure/Win10_22H2_Chinese_Simplifi
 sudo apt install -y qemu-kvm
 sudo qemu-img create -f qcow2 /home/ubuntu/Downloads/win10 60G
 sudo chmod 777 /home/ubuntu/Downloads/win10
+sudo echo 3 > /proc/sys/vm/drop_caches
 #配置4核4G,给太高容易被封号
 kvm /home/ubuntu/Downloads/win10 -m 4096 -smp cores=4 -net user -net nic -usb -usbdevice tablet -cdrom /home/ubuntu/Downloads/Win10_22H2_Chinese_Simplified_x64v1.iso
